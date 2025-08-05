@@ -1,0 +1,2375 @@
+/* Variables globales */
+:root {
+    --color-fondo: #A3B18C;
+    --color-texto: #4D5B6A;
+    --color-accent: #B86B4B;
+    --color-claro: #FFF5E1;
+    --sombra-suave: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    --sombra-fuerte: 2px 2px 6px 2px rgba(0, 0, 0, 0.25);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    min-height: 100vh;
+}
+
+/* Contenedor principal y fondo */
+.fondo-principal {
+    width: 100%;
+    min-height: 2300px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Elementos decorativos del fondo */
+.ellipse-1 {
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 3500px; /* Aumentamos la altura */
+    margin: 0;
+    left: 10px;
+    top: 120px;
+    background: var(--color-claro);
+    box-shadow: inset 0px 10px 4px #a3b18c40;
+    border-top-left-radius: 70% 30%;
+    border-top-right-radius: 70% 30%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
+}
+
+.rectangle-3 {
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 2775px;
+    margin: 0;
+    left: 10px;
+    top: 80px;
+    background: var(--color-claro);
+    box-shadow: inset 2px -3px 5px rgba(163, 177, 140, 0.25);
+    z-index: 2;
+    border-radius: 0px;
+}
+
+/* Contenido principal */
+.hero {
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    margin-top: 280px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.hero-title {
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 120px;
+    color: #4D5B6A;
+    text-shadow: 1px 5px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.hero-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.1rem, 2.5vw, 24px);
+    line-height: 1.3;
+    color: var(--color-texto);
+    margin-bottom: 1.5em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-header {
+    width: 100%;
+    max-width: 978px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 32px 0 0 0;
+    width: 410px;
+    max-width: 100%;
+}
+
+.hero-btn {
+    width: 190px;
+    height: 55px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--sombra-suave);
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    margin: 0;
+    padding: 0 16px;
+}
+
+.hero-btn-outline {
+    background: none;
+    color: #B86B4B;
+    border: 2px solid #B86B4B;
+}
+
+.hero-btn:not(.hero-btn-outline) {
+    background: #B86B4B;
+    color: #FFF5E1;
+    border: none;
+}
+
+.hero-btn:active {
+    filter: brightness(0.95);
+}
+
+.hero-btn:not(.hero-btn-outline):hover {
+    background: #a45c3d;
+}
+
+.hero-btn-outline:hover {
+    background: #FFF5E1;
+    color: #a45c3d;
+    border: 2px solid #a45c3d;
+}
+
+a.hero-btn, a.hero-btn-outline {
+    text-decoration: none !important;
+}
+
+/* Sección de Obras Destacadas */
+.destacadas-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 4;
+}
+
+.destacadas-header {
+    width: 100%;
+    max-width: 575px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destacadas-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    color: #4D5B6A;
+    text-shadow: 1px 5px 4px rgba(0,0,0,0.25);
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.destacadas-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: #4D5B6A;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.slider-obras-container {
+    width: 100%;
+    max-width: 1190px;
+    margin: 45px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 4;
+}
+
+.slider-obras {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta-obra {
+    box-sizing: border-box;
+    width: 375px;
+    height: 400px;
+    background: var(--color-claro);
+    border: 2px solid var(--color-fondo);
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: border 0.2s, box-shadow 0.2s;
+    padding: 0;
+    overflow: hidden;
+}
+
+.tarjeta-obra:hover, .tarjeta-obra.activa {
+    border: 2px solid var(--color-accent);
+    box-shadow: 6px 8px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta-obra:hover .obra-foto,
+.tarjeta-obra:hover .obra-info {
+    transform: scale(1.015);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.obra-foto, .obra-info {
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.obra-foto {
+    width: 320px;
+    height: 254px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin: 30px 0 0 27px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.obra-info {
+    width: 320px;
+    height: 71px;
+    margin-left: 27px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 0;
+}
+
+.obra-titulo {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #4D5B6A;
+    text-shadow: 0px 4px 4px rgba(77, 91, 106, 0.25);
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.obra-artista {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #4D5B6A;
+    text-shadow: 0px 4px 4px rgba(77, 91, 106, 0.25);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .slider-obras-container {
+        max-width: 100%;
+    }
+    
+    .slider-obras {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .fondo-principal {
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .destacadas-section,
+    .artistas-section,
+    .categorias-section {
+        width: 100%;
+        max-width: 600px;
+        margin: 80px auto 60px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .destacadas-header,
+    .artistas-header,
+    .categorias-header {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto 48px auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .slider-obras-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .slider-obras,
+    .obras-usuario-lista,
+    .galeria-obras-lista,
+    #galeria-obras-lista,
+    .categorias-lista,
+    .artistas-destacados-lista,
+    [id*="galeria"],
+    [class*="lista"] {
+        width: 100%;
+        margin: 32px auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .tarjeta-obra,
+    .tarjeta-artista,
+    .categoria-card {
+        margin: 0 auto;
+    }
+
+    .hero {
+        margin-top: 200px;
+        min-height: 350px;
+    }
+
+    .hero-title {
+        font-size: clamp(64px, 15vw, 96px);
+        line-height: 1.1;
+    }
+
+    .slider-obras-container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .slider-obras,
+    .obras-usuario-lista,
+    .galeria-obras-lista,
+    #galeria-obras-lista,
+    .categorias-lista,
+    .artistas-destacados-lista,
+    [id*="galeria"],
+    [class*="lista"] {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 32px !important;
+        width: 100% !important;
+        grid-template-columns: unset !important;
+    }
+
+    .tarjeta-obra {
+        width: 375px;
+        height: 400px;
+        margin: 0;
+    }
+
+    .obra-foto {
+        width: 320px;
+        height: 254px;
+        margin: 30px 0 0 27px;
+    }
+
+    .obra-info {
+        width: 320px;
+        margin-left: 27px;
+    }
+
+    .obra-titulo {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .obra-artista {
+        font-size: 26px;
+        line-height: 32px;
+        margin-top: 8px;
+    }
+
+    .categoria-card {
+        width: 375px;
+        height: 200px;
+    }
+
+    .categoria-nombre {
+        font-size: 32px;
+    }
+
+    .tarjeta-artista {
+        width: 500px;
+        min-height: 350px;
+        margin: 0 auto;
+        padding: 32px;
+        box-sizing: border-box;
+    }
+
+    .artista-header {
+        min-height: 100px;
+        padding: 0;
+    }
+
+    .artista-foto {
+        width: 90px;
+        height: 90px;
+        margin-right: 16px;
+    }
+
+    .artista-nombre {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .artista-estado {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .artista-obras {
+        gap: 12px;
+        justify-content: center;
+        padding: 0 8px;
+    }
+
+    .artista-obra-foto {
+        width: 85px;
+        height: 85px;
+    }
+
+    .categoria-card {
+        width: 500px;
+        height: 220px;
+    }
+
+    .categoria-nombre {
+        font-size: 42px;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1.1rem, 2.5vw, 24px);
+        max-width: 80%;
+        margin: 0 auto 1.5em auto;
+        padding: 0 40px;
+        text-align: center;
+    }
+
+    .slider-obras {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        justify-content: center;
+        align-items: start;
+        padding: 0;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .slider-obras .tarjeta-obra:last-child {
+        grid-column: 1 / -1;
+        margin: 0 auto;
+    }
+
+    .tarjeta-obra {
+        width: 375px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .obra-foto {
+        width: 320px;
+        height: 254px;
+        margin: 30px 0 0 27px;
+    }
+
+    .obra-info {
+        width: 320px;
+        margin-left: 27px;
+    }
+
+    .obra-titulo {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .obra-artista {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .categorias-lista,
+    .categorias-lista-grande {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 28px 20px !important;
+        max-width: 800px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        padding: 0 24px !important;
+        box-sizing: border-box;
+    }
+    .categoria-card,
+    .categoria-card-grande {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .galeria-obras-lista {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 28px 20px !important;
+        max-width: 800px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        padding: 0 24px !important;
+        box-sizing: border-box;
+    }
+    .galeria-obras-lista .tarjeta-obra:last-child {
+        grid-column: 1 / -1 !important;
+        justify-self: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 64px);
+    }
+    
+    .destacadas-title {
+        font-size: 32px;
+    }
+    
+    .tarjeta-obra {
+        width: 100%;
+        max-width: 375px;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.login-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px 40px 80px 40px;
+    box-sizing: border-box;
+}
+
+.login-form-box {
+    box-sizing: border-box;
+    width: 978px;
+    height: 547px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    background: var(--color-claro);
+    border: 2px solid #A3B18C;
+    border-radius: 20px;
+    box-shadow: var(--sombra-suave);
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 48px;
+    justify-content: center;
+}
+
+.login-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 40px 48px 48px;
+    gap: 5px;
+}
+
+.login-form label {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #4D5B6A;
+    margin-bottom: 0px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #A3B18C;
+    border-radius: 10px;
+    padding: 0 16px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: #4D5B6A;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    background: #FFF5E1;
+    line-height: 50px;
+}
+
+.login-form input[type="text"]::placeholder,
+.login-form input[type="email"]::placeholder,
+.login-form input[type="password"]::placeholder {
+    font-family: 'Lato', sans-serif;
+    color: #4D5B6A;
+    opacity: 0.7;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #B86B4B;
+    outline: none;
+}
+
+.login-form input[type="checkbox"] + label {
+    font-size: 15px;
+    color: #4D5B6A;
+    font-family: 'Lato', sans-serif;
+    margin-left: 4px;
+}
+
+.login-form button.hero-btn {
+    width: 100%;
+    height: 55px;
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 18px;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+    background: #B86B4B;
+    color: #FFF5E1;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.login-form button.hero-btn:hover {
+    background: #a45c3d;
+}
+
+.login-img {
+    width: 489px;
+    height: 547px;
+    background: url('../uploads/login-register/login-ilustracion.png') center/cover no-repeat;
+    border-left: 2px solid #A3B18C;
+    border-radius: 0px 20px 20px 0px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1100px) {
+    .login-content {
+        max-width: 98vw;
+        padding: 24px 4px 28px 4px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login-header {
+        max-width: 98vw;
+        margin-top: 60px;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .login-form-box, .register-form-box {
+        width: 98vw;
+        min-width: 320px;
+        max-width: 420px;
+        flex-direction: column;
+        height: auto;
+        padding: 0 4px 12px 4px;
+        margin: 0 auto 16px auto;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .login-form {
+        padding: 18px 0;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .login-form input[type="text"],
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+        margin-bottom: 8px;
+    }
+    .login-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+        margin-top: 12px;
+        align-items: center;
+    }
+    .hero-btn {
+        width: 100%;
+        min-width: 100px;
+        max-width: 100%;
+        font-size: 18px;
+        height: 45px;
+        margin: 0 auto;
+    }
+    .login-form-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    .mensaje-azul, .login-message {
+        font-size: 15px;
+        margin: 8px 0;
+        text-align: center;
+    }
+    .register-form-box form > div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .login-content {
+        max-width: 100vw;
+        padding: 12px 2px 16px 2px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login-header {
+        margin-top: 40px;
+        margin-bottom: 6px;
+        padding-bottom: 4px;
+        text-align: center;
+    }
+    .login-form-box, .register-form-box {
+        width: 100vw;
+        min-width: 0;
+        max-width: 98vw;
+        padding: 0 2px 8px 2px;
+        margin: 0 auto 10px auto;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .login-form {
+        padding: 8px 0;
+        gap: 6px;
+        align-items: center;
+    }
+    .login-form-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .login-form input[type="text"],
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+        font-size: 13px;
+        height: 36px;
+        padding: 0 6px;
+        margin-bottom: 6px;
+    }
+    .login-form label {
+        font-size: 14px;
+        text-align: left;
+        width: 100%;
+    }
+    .hero-btn {
+        font-size: 15px;
+        height: 36px;
+        margin: 0 auto;
+    }
+    .login-buttons {
+        gap: 6px;
+        margin-top: 8px;
+        align-items: center;
+    }
+    .mensaje-azul, .login-message {
+        font-size: 13px;
+        margin: 6px 0;
+        text-align: center;
+    }
+}
+
+.login-form-title {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #4A5A6A;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.register-form-box {
+    min-height: 670px;
+}
+
+.register-form-box .login-img {
+    height: 670px;
+}
+
+.edit-message-bar {
+    width: 100%;
+    max-width: 1238px;
+    height: 90px;
+    margin: 32px auto 24px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff5e1;
+    border: 2px solid #A3B18C;
+    border-radius: 16px;
+    padding: 0 32px;
+    font-size: 1.15rem;
+    color: #4D5B6A;
+    box-sizing: border-box;
+    gap: 24px;
+}
+
+.edit-message-bar .hero-btn {
+    height: 55px !important;
+    min-width: 190px !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+    box-shadow: 0 2px 8px rgba(123, 167, 217, 0.10) !important;
+    padding: 0 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.profile-main {
+    align-items: stretch;
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.profile-picture-placeholder {
+    width: 319px;
+    height: 319px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #fff;
+    filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.25));
+    flex-shrink: 0;
+}
+
+.profile-picture-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-info {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.profile-info .profile-nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 96px;
+    line-height: 128px;
+    color: #4D5B6A;
+    text-shadow: 1px 5px 4px rgba(0,0,0,0.25);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    margin-bottom: 60px;
+}
+
+.profile-info .profile-frase {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
+    color: #B86B4B;
+    margin-bottom: 50px;
+}
+
+.profile-info .profile-descripcion {
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    line-height: 31px;
+    color: #4D5B6A;
+    margin-bottom: 32px;
+}
+
+.profile-contacto-titulo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #4D5B6A;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.profile-contacto-dato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 26px;
+    margin-bottom: 6px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #4D5B6A;
+    font-weight: 400;
+}
+
+.profile-info textarea[name="descripcion"],
+.profile-info textarea#descripcion,
+.profile-main textarea#descripcion {
+    min-height: 120px;
+    max-height: 600px;
+    overflow-y: hidden;
+    resize: none;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 16px;
+}
+
+.profile-titulo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 59px;
+    color: #B86B4B;
+    text-shadow: 1px 5px 4px rgba(0,0,0,0.25);
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#btn-editar-perfil, #btn-guardar-perfil {
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0 12px;
+}
+
+.profile-main .login-form-input {
+    background: #FFF5E1 !important;
+    border: 0.1px solid #A3B18C !important;
+    border-radius: 4px !important;
+    color: #4D5B6A !important;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 4px 8px rgba(123, 167, 217, 0.10);
+    transition: box-shadow 0.2s;
+}
+.profile-main .login-form-input:focus {
+    border-color: #B86B4B !important;
+    box-shadow: 0 2px 12px rgba(123, 167, 217, 0.18);
+    outline: none !important;
+}
+
+.profile-main .login-form-input:disabled {
+    border: none !important;
+    background: #FFF5E1 !important;
+    color: #4D5B6A !important;
+    box-shadow: none !important;
+    opacity: 1;
+}
+
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+.file-label-outline {
+    background: #FFF5E1;
+    color: #B86B4B;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    border: 2px solid #B86B4B;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    box-shadow: 0 2px 8px rgba(123, 167, 217, 0.10);
+    display: inline-block;
+}
+
+.file-label-outline:hover {
+    color: #a45c3d;
+    border: 2px solid #a45c3d;
+}
+
+.profile-main .profile-info .login-form-input {
+    margin-bottom: 50px !important;
+}
+
+.profile-main .profile-info .login-form-input[name="nombre"] {
+    margin-bottom: 60px !important;
+}
+
+.profile-main .profile-info .login-form-input[name="estado"] {
+    margin-bottom: 50px !important;
+}
+
+.profile-info-placeholder {
+    margin-bottom: 32px;
+}
+
+.profile-info-placeholder .profile-frase,
+.profile-info-placeholder {
+    font-weight: 300 !important;
+    opacity: 1;
+}
+
+.profile-message {
+    font-family: 'Lato', sans-serif;
+    color: #4D5B6A;
+    font-size: 1.1rem;
+    margin: 18px 0 18px 0;
+    text-align: left;
+}
+
+.no-works-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    color: #4D5B6A;
+    text-align: center;
+    margin: 32px 64px;
+    font-weight: 400;
+}
+
+/* Layout para subir-obra y reutilizable para edición tipo perfil */
+.subir-obra-form, .profile-main {
+    width: 100%;
+    max-width: 1238px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.subir-obra-form .profile-col-izq, .subir-obra-form .profile-info {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.preview-img-box-main {
+    width: 650px;
+    height: 520px;
+    background: #E9E9E9;
+    border: 1.5px solid #A3B18C;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+.preview-img-box-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imagenes-preview-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 0;
+}
+.preview-img-box {
+    width: 140px;
+    height: 140px;
+    background: #E9E9E9;
+    border: 1.5px solid #A3B18C;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.preview-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.subir-obra-titulo {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    font-size: 56px;
+    color: #4D5B6A;
+    margin-bottom: 12px;
+    line-height: 1.1;
+    text-shadow: 1px 5px 4px rgba(0,0,0,0.18);
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 8px rgba(123, 167, 217, 0.10);
+    padding: 12px 18px;
+    width: 100%;
+}
+.subir-obra-artista-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+.subir-obra-artista-foto {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #B86B4B;
+}
+.subir-obra-artista-nombre {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: #B86B4B;
+    font-style: italic;
+    font-weight: 300 !important;
+}
+
+/* Botón grande alineado a la derecha (solo para vista pública, pero preparado) */
+.btn-contactar-artista {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 32px;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    background: #B86B4B;
+    color: #FFF5E1;
+    border-radius: 8px;
+    border: none;
+    padding: 18px 0;
+    display: block;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(123, 167, 217, 0.10);
+    transition: background 0.2s;
+}
+.btn-contactar-artista:hover {
+    background: #a45c3d;
+}
+
+@media (max-width: 1200px) {
+    .rectangle-3 {
+        padding: 24px 8px;
+    }
+    .subir-obra-form, .profile-main {
+        flex-direction: column;
+        gap: 32px;
+        align-items: stretch;
+    }
+    .preview-img-box-main {
+        width: 100%;
+        max-width: 420px;
+        height: 220px;
+    }
+}
+
+.subir-obra-form select#categoria_id {
+    width: 100%;
+    height: 65px;
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #4D5B6A;
+    background: #FFF5E1;
+    border: 2px solid #B86B4B;
+    border-radius: 8px;
+    padding: 0 28px;
+    margin-top: 24px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(123, 167, 217, 0.10);
+    text-align: center;
+    display: block;
+}
+.subir-obra-form select#categoria_id:focus {
+    border-color: #a45c3d;
+    outline: none;
+}
+
+.subir-obra-form .profile-col-izq > *, .subir-obra-form .profile-info > * {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.subir-obra-form .profile-col-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subir-obra-form .profile-col-izq .preview-img-box-main {
+    width: 622px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 32px 0 !important;
+}
+
+.subir-obra-form .profile-info {
+    width: 100%;
+    max-width: none;
+    padding-top: 60px;
+}
+
+label {
+    font-family: 'Lato', sans-serif;
+    color: #4D5B6A;
+    font-size: 18px;
+}
+
+.custom-file-upload .file-label-outline {
+    font-size: 18px;
+    padding: 12px 28px;
+}
+
+.subir-obra-titulo::placeholder {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.galeria-obras-lista {
+    position: relative;
+    z-index: 3;
+    margin-top: 140px !important;
+}
+
+.artistas-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 4;
+}
+
+.artistas-header {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artistas-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    color: #4D5B6A;
+    text-shadow: 1px 5px 4px rgba(0,0,0,0.25);
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.artistas-subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: #4D5B6A;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.artistas-destacados-lista {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto 32px auto;
+    z-index: 3;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.tarjeta-artista {
+    background: var(--color-claro);
+    border: 2px solid #A3B18C;
+    box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, 0.13);
+    border-radius: 20px;
+    width: 560px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 38px 40px 32px 40px;
+    position: relative;
+    z-index: 3;
+    transition: box-shadow 0.2s, border 0.2s;
+    justify-content: center;
+}
+
+.tarjeta-artista:hover {
+    border: 2.5px solid #B86B4B;
+    box-shadow: 6px 8px 20px 2px rgba(0, 0, 0, 0.18);
+}
+
+.tarjeta-artista:hover .artista-foto,
+.tarjeta-artista:hover .artista-nombre,
+.tarjeta-artista:hover .artista-estado,
+.tarjeta-artista:hover .artista-obra-foto {
+    transform: scale(1.045);
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.artista-foto, .artista-nombre, .artista-estado, .artista-obra-foto {
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.artista-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    min-height: 130px;
+}
+
+.artista-foto {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.18);
+    margin-right: 32px;
+    margin-left: 7px;
+}
+
+.artista-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.artista-nombre {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #4D5B6A;
+    text-shadow: 0px 4px 4px rgba(77, 91, 106, 0.18);
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+.artista-estado {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: #4D5B6A;
+    text-shadow: 0px 4px 4px rgba(77, 91, 106, 0.18);
+    margin-top: 2px;
+    line-height: 1.1;
+}
+
+.artista-linea {
+    width: 90%;
+    height: 0;
+    border-top: 2px solid #B86B4B;
+    margin: 22px auto 30px auto;
+    position: relative;
+}
+
+.artista-linea::before, .artista-linea::after {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: #A35A3E;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: absolute;
+    top: -7px;
+}
+.artista-linea::before {
+    left: -22px;
+}
+.artista-linea::after {
+    right: -22px;
+}
+
+.artista-obras {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.artista-obra-foto {
+    width: 170px;
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 1px 2px 8px rgba(0,0,0,0.13);
+    background-color: #FFF5E1;
+}
+
+.artistas-cta .hero-btn {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.mensaje-azul {
+    font-family: 'Lato', sans-serif;
+    color: #4D5B6A;
+    font-size: 1.1rem;
+    margin: 18px 0 18px 0;
+    text-align: left;
+}
+
+/* Popup de contacto estilo Figma */
+.popup-contacto {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: auto;
+    bottom: 100%;
+    background: none;
+    z-index: 10;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    box-shadow: none;
+    margin-left: 90px;
+    margin-bottom: 10px;
+}
+.popup-contacto-content {
+    background: #FFF5E1;
+    border: 1px solid #4D5B6A;
+    box-shadow: 0 4px 24px 0 rgba(163, 177, 140, 0.18);
+    border-radius: 18px;
+    padding: 32px 36px 24px 36px;
+    min-width: 340px;
+    max-width: 95vw;
+    min-height: unset;
+    max-height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    overflow-y: auto;
+    animation: popupShow 0.2s;
+    box-sizing: border-box;
+}
+@keyframes popupShow {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.popup-contacto-cerrar {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #FFF5E1;
+    border: 2px solid #A3B18C;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+    color: #A3B18C;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    padding: 0;
+}
+.popup-contacto-cerrar:hover {
+    background: #B86B4B;
+    color: #FFF5E1;
+    border-color: #B86B4B;
+}
+.popup-contacto-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #A3B18C;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: center;
+    width: 100%;
+}
+.popup-contacto-linea {
+    width: 100%;
+    height: 0;
+    border-top: 2.5px solid #B86B4B;
+    margin: 0 auto 18px auto;
+    position: relative;
+}
+.popup-contacto-linea::before, .popup-contacto-linea::after {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: #A35A3E;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: absolute;
+    top: -7px;
+}
+.popup-contacto-linea::before {
+    left: -22px;
+}
+.popup-contacto-linea::after {
+    right: -22px;
+}
+.popup-contacto-dato {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: #4D5B6A;
+    margin-bottom: 12px;
+    margin-left: 2px;
+}
+.popup-contacto-dato img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    filter: none;
+    background: none;
+}
+.popup-contacto-dato img[src$='.svg'] {
+    filter: brightness(0) saturate(100%) invert(74%) sepia(13%) saturate(1042%) hue-rotate(56deg) brightness(92%) contrast(91%);
+}
+@media (max-width: 600px) {
+    .popup-contacto-content {
+        min-width: 90vw;
+        padding: 18px 8vw 18px 8vw;
+    }
+    .popup-contacto-titulo {
+        font-size: 28px;
+    }
+    .popup-contacto-dato {
+        font-size: 16px;
+    }
+}
+
+/* Limpieza y simplificación obra.php */
+.obra-col-der {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 600px;
+    width: 100%;
+    padding: 0 16px;
+}
+.obra-titulo-detalle {
+    font-family: 'Playfair Display', serif;
+    font-size: 82px;
+    font-style: italic;
+    color: #4D5B6A;
+    text-shadow: 1px 5px 4px rgba(77,91,106,0.25);
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+    line-height: 1.1;
+    text-align: center;
+    width: 100%;
+}
+.obra-artista-bloque {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
+    width: 100%;
+}
+.obra-artista-foto {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+    background: none;
+}
+.obra-artista-nombre {
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    color: #B86B4B;
+    font-style: italic;
+    font-weight: 400;
+    margin-left: 0;
+    text-align: left;
+}
+.obra-descripcion-detalle {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: #4D5B6A;
+    margin-bottom: 32px;
+    margin-top: 8px;
+    line-height: 1.5;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+.btn-contactar-artista {
+    margin: 0 auto;
+    display: block;
+}
+@media (max-width: 900px) {
+    .obra-titulo-detalle {
+        font-size: 38px;
+    }
+    .obra-artista-nombre {
+        font-size: 20px;
+    }
+    .obra-artista-foto {
+        width: 38px;
+        height: 38px;
+    }
+    .obra-col-der {
+        max-width: 98vw;
+    }
+}
+
+/* Sección de categorías en el home */
+.categorias-section-wrapper {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 160px; /* Aumentamos el margen inferior */
+}
+.categorias-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.categorias-header {
+    margin-top: 120px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.categorias-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 32px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.categoria-card {
+    background: #FFF5E1;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(77, 91, 106, 0.5);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+                border 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.categoria-card:hover {
+    box-shadow: 6px 8px 20px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 245, 225, 0.5);
+    transform: translateY(-4px) scale(1.025);
+}
+.categoria-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    display: block;
+}
+.categoria-nombre {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    color: #FFF5E1;
+    -webkit-text-stroke: 0.5px #4D5B6A;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    pointer-events: none;
+    transition: color 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+                text-shadow 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+                font-size 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+                -webkit-text-stroke 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.categoria-card:hover .categoria-nombre {
+    color: #4D5B6A;
+    -webkit-text-stroke: 0.5px #FFF5E1;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 41px;
+}
+.categorias-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+.categorias-cta .hero-btn {
+    min-width: 300px;
+    padding: 18px 48px;
+    white-space: nowrap;
+    height: auto;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .categorias-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .categorias-lista {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 28px 20px !important;
+        max-width: 800px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        padding: 0 24px !important;
+        box-sizing: border-box;
+    }
+
+    .categoria-card {
+        height: 280px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .categoria-nombre {
+        font-size: 36px;
+    }
+}
+@media (max-width: 600px) {
+    .categorias-section {
+        max-width: 400px;
+    }
+
+    .categorias-lista,
+    .categorias-lista-grande {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        max-width: 400px !important;
+        padding: 0 12px !important;
+        gap: 18px !important;
+        margin: 0 auto !important;
+    }
+
+    .categoria-card {
+        height: 220px !important;
+    }
+
+    .categoria-nombre {
+        font-size: 32px;
+    }
+}
+
+.categorias-lista-grande {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 40px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 140px auto 64px auto;
+}
+.categoria-card-grande {
+    height: 320px;
+    border-radius: 28px;
+}
+.categoria-card-grande img {
+    height: 100%;
+    border-radius: 28px;
+}
+.categoria-card-grande .categoria-nombre {
+    font-size: 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    -webkit-text-stroke-width: 1px;
+    padding: 0 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.categoria-card-grande:hover .categoria-nombre {
+    font-size: 56px;
+}
+@media (max-width: 900px) {
+    .categorias-lista-grande {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        max-width: 98vw;
+    }
+    .categoria-card-grande {
+        height: 200px;
+    }
+    .categoria-card-grande .categoria-nombre {
+        font-size: 32px;
+    }
+    .categoria-card-grande:hover .categoria-nombre {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 900px) {
+    .ellipse-1 {
+        height: 100% !important;
+        min-height: 2000px !important;
+        top: 125px;
+        left: 0;
+        width: 100%;
+        border-top-left-radius: 80% 10%;
+        border-top-right-radius: 80% 10%;
+        margin-left: 1%;
+        margin-right: 1% !important;
+    }
+
+    .rectangle-3 {
+        height: 100% !important;
+        min-height: 2000px !important;
+        padding: 24px 8px;
+    }
+}
+@media (max-width: 600px) {
+    .ellipse-1 {
+        width: 98%;
+        height: 100% !important;
+        min-height: 2000px !important;
+        top: 125px;
+        left: 0;
+        border-top-left-radius: 80% 5%;
+        border-top-right-radius: 80% 5%;
+        margin-left: 1%;
+        margin-right: 1% !important;
+    }
+
+    .rectangle-3 {
+        height: 100% !important;
+        min-height: 2000px !important;
+        padding: 24px 8px;
+    }
+
+    .fondo-principal {
+        min-height: 2000px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .fondo-principal {
+        padding: 0 16px;
+    }
+
+    .hero-content {
+        padding: 32px 16px;
+    }
+
+    .destacadas-section,
+    .artistas-section,
+    .categorias-section {
+        max-width: 400px;
+        margin: 60px auto 40px auto;
+        padding: 0 16px;
+    }
+
+    .destacadas-header,
+    .artistas-header,
+    .categorias-header {
+        max-width: 400px;
+        margin: 0 auto 32px auto;
+    }
+
+    .slider-obras-container {
+        max-width: 400px;
+        margin: 32px auto;
+        padding: 0 16px;
+    }
+
+    .destacadas-title,
+    .artistas-title,
+    .categorias-title {
+        font-size: 42px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .destacadas-subtitle,
+    .artistas-subtitle,
+    .categorias-subtitle {
+        font-size: 18px;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    .hero {
+        margin-top: 160px;
+        min-height: 300px;
+    }
+
+    .hero-title {
+        font-size: clamp(48px, 12vw, 64px);
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+        padding: 0 16px;
+    }
+
+    .tarjeta-obra {
+        width: 340px;
+        height: 380px;
+    }
+
+    .obra-foto {
+        width: 290px;
+        height: 230px;
+        margin: 25px 0 0 25px;
+    }
+
+    .obra-info {
+        width: 290px;
+        margin-left: 25px;
+    }
+
+    .obra-titulo {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .obra-artista {
+        font-size: 22px;
+        line-height: 28px;
+        margin-top: 6px;
+    }
+
+    .categoria-card {
+        width: 340px;
+        height: 180px;
+    }
+
+    .categoria-nombre {
+        font-size: 28px;
+    }
+
+    .hero-btn {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .tarjeta-artista {
+        width: calc(100% - 32px);
+        max-width: 340px;
+        min-height: 320px;
+        padding: 24px;
+        margin: 0 auto;
+    }
+
+    .artista-header {
+        min-height: 100px;
+        padding: 0;
+    }
+
+    .artista-foto {
+        width: 90px;
+        height: 90px;
+        margin-right: 16px;
+    }
+
+    .artista-nombre {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .artista-estado {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .artista-obras {
+        gap: 12px;
+        justify-content: center;
+        padding: 0 8px;
+    }
+
+    .artista-obra-foto {
+        width: 85px;
+        height: 85px;
+    }
+
+    .categoria-card {
+        width: 340px;
+        height: 180px;
+    }
+
+    .categoria-nombre {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        max-width: 100vw !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+    }
+    .profile-main {
+        flex-direction: column !important;
+        gap: 24px !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+    }
+    .profile-col-izq, .profile-info {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 0 !important;
+    }
+    .profile-picture-placeholder {
+        margin: 0 auto 20px auto !important;
+        width: 220px !important;
+        height: 220px !important;
+        font-size: 1rem !important;
+    }
+    .profile-contacto-bloque {
+        width: calc(100% - 32px) !important;
+        max-width: 400px !important;
+        margin: 24px auto 0 auto !important;
+        padding: 20px 16px 24px 16px !important;
+        box-sizing: border-box !important;
+        border-radius: 16px !important;
+        background: #fff5e1 !important;
+    }
+    .profile-contacto-titulo {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 12px !important;
+        margin-top: 0 !important;
+        text-align: left !important;
+    }
+    .profile-contacto-dato {
+        font-size: 16px !important;
+        height: 24px !important;
+        margin-bottom: 8px !important;
+        gap: 10px !important;
+    }
+    .profile-info {
+        align-items: center !important;
+        padding: 0 !important;
+        width: calc(100% - 32px) !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+    }
+    .profile-nombre {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+        margin-bottom: 16px !important;
+        margin-top: 12px !important;
+        word-break: break-word !important;
+        text-shadow: var(--sombra-suave) !important;
+        width: 100% !important;
+    }
+    .profile-frase {
+        font-size: 20px !important;
+        text-align: center !important;
+        margin-bottom: 12px !important;
+        color: #B86B4B !important;
+        width: 100% !important;
+    }
+    .profile-descripcion {
+        font-size: 16px !important;
+        text-align: center !important;
+        margin-bottom: 16px !important;
+        color: #4D5B6A !important;
+        word-break: break-word !important;
+        line-height: 1.4 !important;
+        width: 100% !important;
+    }
+
+    .profile-titulo {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: calc(100% - 32px) !important;
+        max-width: 400px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 !important;
+    }
+
+    #btn-editar-perfil,
+    #btn-guardar-perfil,
+    .profile-titulo .hero-btn {
+        width: auto !important;
+        min-width: 120px !important;
+        height: 36px !important;
+        font-size: 14px !important;
+        padding: 0 16px !important;
+        margin-left: 12px !important;
+    }
+
+    .edit-message-bar {
+        width: calc(100% - 32px) !important;
+        max-width: 400px !important;
+        padding: 16px !important;
+        height: auto !important;
+        margin: 16px auto !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        text-align: center !important;
+    }
+
+    .edit-message-bar .hero-btn {
+        width: 100% !important;
+        height: 45px !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .subir-obra-form {
+        width: calc(100% - 32px) !important;
+        max-width: 600px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        gap: 24px !important;
+    }
+
+    .subir-obra-form .profile-col-izq,
+    .subir-obra-form .profile-info {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .subir-obra-titulo {
+        font-size: 42px !important;
+        padding: 8px 12px !important;
+    }
+
+    .subir-obra-form select#categoria_id {
+        font-size: 22px !important;
+        height: 55px !important;
+        padding: 0 20px !important;
+    }
+
+    .subir-obra-form .profile-info {
+        padding-top: 32px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .subir-obra-form {
+        width: calc(100% - 32px) !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        gap: 16px !important;
+    }
+
+    .subir-obra-titulo {
+        font-size: 32px !important;
+        padding: 6px 10px !important;
+    }
+
+    .subir-obra-form select#categoria_id {
+        font-size: 18px !important;
+        height: 45px !important;
+        padding: 0 16px !important;
+        margin-top: 16px !important;
+    }
+
+    .subir-obra-form .profile-info {
+        padding-top: 24px !important;
+    }
+
+    .subir-obra-artista-nombre {
+        font-size: 20px !important;
+    }
+
+    .subir-obra-artista-foto {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .preview-img-box-main {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: 280px !important;
+        margin: 0 auto 16px auto !important;
+    }
+
+    .imagenes-preview-row {
+        gap: 12px !important;
+        justify-content: center !important;
+    }
+
+    .preview-img-box {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+.navbar-logo {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media (max-width: 700px) {
+    .navbar-logo {
+        width: 120px;
+        height: 120px;
+    }
+}
