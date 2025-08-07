@@ -7,6 +7,7 @@
 > Despite its flaws, this project means a lot to me — both as proof that I could bring a full idea to life and as the seed that grew my love for development.
 
 ---
+<br>
 
 ## 🪷 About the project
 
@@ -15,7 +16,7 @@ Developed as my final project for the Web Applications Development Degree (CFGS 
 
 The platform connects artists with people who appreciate honest, emotional art. Its goal is to provide a space that feels calm, inviting, and easy to navigate — while maintaining full functionality.
 
----
+<br>
 
 ## ✨ What I built
 
@@ -25,7 +26,7 @@ The platform connects artists with people who appreciate honest, emotional art. 
 - **Responsive UI**: mobile-friendly layouts for an optimal experience on all devices  
 - **Custom design system**: colors, typography, UI components, and micro-interactions
 
----
+<br>
 
 ## 🔧 Tech stack
 
@@ -35,7 +36,7 @@ The platform connects artists with people who appreciate honest, emotional art. 
 - **Design & Prototyping:** Figma (high-fidelity prototyping)  
 - **Branding & UI:** Custom palette, typography pairing, spacing system.
 
----
+<br>
 
 ## 🖌️ Design approach
 
@@ -47,7 +48,7 @@ The interface was designed with user emotion and comfort in mind, inspired by th
 - **Lato** for clarity, **Playfair Display** for personality  
 - Smooth hover states and interaction feedback for a tactile feel
 
----
+<br>
 
 ## 🎯 Prototype & visuals
 
@@ -61,7 +62,18 @@ The interface was designed with user emotion and comfort in mind, inspired by th
 ### 🎥 Demo video *(to be added)*
 - Full navigation and features overview
 
+<br>
+
+## 🔮 Future improvements
+
+- Add social sharing features  
+- Improve search and filtering options  
+- Enhance accessibility compliance  
+- Mobile app version
+
 ---
+
+<br>
 
 ## 📌 What this project says about me
 
@@ -70,48 +82,3 @@ The interface was designed with user emotion and comfort in mind, inspired by th
 - **Adaptability**: I learn quickly and apply new skills to solve real problems  
 - **Attention to detail**: From database structure to hover animations, I value consistency and polish  
 - **Growth mindset**: I see imperfections as opportunities to improve
-
-<!--
-
-## 🪷 About the project
-
-**The Art Nook** is a warm and welcoming digital space designed to give visibility to emerging artists.  
-It was created as my final project for the Web Applications Development Degree (CFGS - DAW) and is inspired by personal experiences and a desire to make art more accessible.
-
-The platform connects creators with people who appreciate honest, emotional art. It aims to feel calm, close, and carefully designed — offering both functionality and a visually thoughtful experience.
-
----
-
-## ✨ Main features
-
-- User registration and login  
-- Profile editing  
-- Uploading artworks (with images)  
-- Browsing artworks and artists  
-- Marking artworks and artists as favorites  
-- Visual emphasis on featured works  
-- Frontend designed for softness, space and emotional tone  
-- Responsive layout
-
----
-
-## 🔧 Technologies used
-
-- **Frontend:** HTML5 · CSS3 · JavaScript  
-- **Backend:** PHP  
-- **Database:** MySQL  
-- **Design & UX/UI:** Figma (high-fidelity prototyping)  
-- **Style guide:** Custom palette, grid system and branding
-
----
-
-## 🖌️ Design goals
-
-> Calm, emotional, personal.
-
-The UI was carefully crafted based on a custom design system using soft colors, organic spacing, rounded components and typography with character. It’s meant to feel like a “nook” — a cozy place to explore and connect through art.
-
-Explore the full prototype on Figma:  
-🎯 [View high-fidelity prototype](https://www.figma.com/proto/CQKDpo4G03VkpKdhrvP59z/The-Art-Nook?node-id=23-2&t=gFk3ENJ2csAJYopm-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A2)
-
----
