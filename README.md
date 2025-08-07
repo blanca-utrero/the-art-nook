@@ -41,7 +41,7 @@ The platform connects artists with people who appreciate honest, emotional art. 
 
 > Calm, emotional, personal.
 
-The interface was designed with **user emotion and comfort in mind**, using:
+The interface was designed with user emotion and comfort in mind, inspired by the cozy, safe feeling of a reading nook — a special little space on the internet just for art. This concept guided choices like:
 - A warm, muted color palette (`#FFF5E1` · `#A3B18C` · `#B86B4B` · `#4D5B6A`)  
 - Rounded corners, generous whitespace, and soft shadows  
 - **Lato** for clarity, **Playfair Display** for personality  
@@ -51,7 +51,7 @@ The interface was designed with **user emotion and comfort in mind**, using:
 
 ## 🎯 Prototype & visuals
 
-- **High-fidelity prototype:** [View on Figma](https://www.figma.com/proto/CQKDpo4G03VkpKdhrvP59z/The-Art-Nook?node-id=23-2&t=gFk3ENJ2csAJYopm-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A2)  
+- **High-fidelity prototype:** [View file on Figma](https://www.figma.com/design/CQKDpo4G03VkpKdhrvP59z/The-Art-Nook?node-id=0-1&t=bwpCQU5leZGJsvSF-1) or [Experience the prototype](https://www.figma.com/proto/CQKDpo4G03VkpKdhrvP59z/The-Art-Nook?node-id=23-2&t=gFk3ENJ2csAJYopm-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A2)
 
 ### 📸 Screenshots *(to be added)*
 - Gallery view  
