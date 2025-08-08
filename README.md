@@ -54,20 +54,27 @@ The interface was designed with user emotion and comfort in mind, inspired by th
 
 - **High-fidelity prototype:** [View file on Figma](https://www.figma.com/design/CQKDpo4G03VkpKdhrvP59z/The-Art-Nook?node-id=0-1&t=bwpCQU5leZGJsvSF-1) or [Experience the prototype](https://www.figma.com/proto/CQKDpo4G03VkpKdhrvP59z/The-Art-Nook?node-id=23-2&t=gFk3ENJ2csAJYopm-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A2)
 
-### 📸 Screenshots *(to be added)*
-- Gallery view  
-- Artist profile  
-- Artwork upload form  
+
+### 📸 What it ended up looking like
+
+**Home view** | **Gallery view**
+--- | ---
+![Home view](https://github.com/user-attachments/assets/3b6c7b77-8dfe-4995-8a8f-d9a1e6f4efe3) | ![Gallery view](https://github.com/user-attachments/assets/41b75080-69b0-4574-8d27-68adc3a1d044)
+
+**Artists view** | **Categories view**
+--- | ---
+![Artists view](https://github.com/user-attachments/assets/e1cebd48-e708-40ac-980f-9cb322059e9d) | ![Categories view](https://github.com/user-attachments/assets/75026f2d-7049-4ac5-aacc-1f0bf432ff4d)
 
 ### 🎥 Demo video *(to be added)*
 - Full navigation and features overview
-
+  
 <br>
 
 ## 🔮 Future improvements
 
-- Add social sharing features  
-- Improve search and filtering options  
+- Add social sharing features
+- Add a liking/favorite feature, for both art and artists, as well as a favorites explore section
+- Improve search and filtering options
 - Enhance accessibility compliance  
 - Mobile app version
 
