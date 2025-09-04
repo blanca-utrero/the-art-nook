@@ -65,9 +65,11 @@ The interface was designed with user emotion and comfort in mind, inspired by th
 --- | ---
 ![Artists view](https://github.com/user-attachments/assets/e1cebd48-e708-40ac-980f-9cb322059e9d) | ![Categories view](https://github.com/user-attachments/assets/75026f2d-7049-4ac5-aacc-1f0bf432ff4d)
 
+<!--
 ### 🎥 Demo video *(to be added)*
 - Full navigation and features overview
-  
+
+-->
 <br>
 
 ## 🔮 Future improvements
